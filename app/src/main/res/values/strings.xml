@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Survey Me</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="acra_toast_text">Report sent</string>
+</resources>

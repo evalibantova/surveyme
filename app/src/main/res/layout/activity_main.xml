@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context="com.chillimuffin.survey.MainActivity"
+    tools:layout_editor_absoluteY="0dp"
+    tools:layout_editor_absoluteX="0dp">
+    <TextView
+        android:id="@+id/label"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Serial port"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/entry"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/label"
+        android:layout_alignRight="@+id/label"
+        android:layout_below="@+id/label"
+        android:ems="10"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+
+        <requestFocus/>
+    </EditText>
+
+    <Button
+        android:id="@+id/open"
+        android:visibility="gone"
+        style="?borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/entry"
+        android:layout_alignRight="@+id/entry"
+        android:layout_below="@+id/entry"
+        android:text="open"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/send"
+        android:visibility="gone"
+        style="?borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/entry"
+        android:layout_alignRight="@+id/entry"
+        android:layout_below="@+id/entry"
+        android:text="Send"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/close"
+        android:visibility="gone"
+        style="?borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/entry"
+        android:layout_alignRight="@+id/entry"
+        android:layout_below="@+id/entry"
+        android:text="close"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        android:id="@+id/container"></RelativeLayout>
+
+    <WebView
+        android:id="@+id/activity_main_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteY="-50dp"
+        tools:layout_editor_absoluteX="-30dp" />
+
+
+</RelativeLayout>

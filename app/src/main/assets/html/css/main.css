@@ -1,0 +1,112 @@
+@font-face {
+  font-family: TitilliumWeb-Regular;
+  src: url(../fonts/TitilliumWeb-Regular.ttf);
+}
+html {
+  height: 100%;
+  font-size: 1vw; /* 16px */
+}
+body {
+  font-family: TitilliumWeb-Regular;
+  height: 100%;
+  font-size: 1em;
+}
+.content.centered {
+  display: table;
+  height: 100%;
+  width: 100%;
+  background: url(../img/gradient.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+      transform: translateY(-100%);
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+.content.centered .wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: 3em;
+}
+.content.centered.shown {
+  -webkit-transform: none;
+  -ms-transform: none;
+      transform: none;
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 6em;
+  margin-bottom: 0em;
+}
+.rate {
+  text-align: center;
+  margin-bottom: 7em;
+  margin-top: 5em;
+}
+.rate img {
+  width: 10em;
+}
+.icon {
+  display: inline-block;
+  padding: 0.5em;
+  margin: 0 0.5em;
+  border-radius: 50%;
+  border: 0.3em solid transparent;
+  transition: border-color 0.55s ease;
+}
+.icon.focus.smile1 {
+  border-color: #fe5858;
+}
+.icon.focus.smile2 {
+  border-color: #ff9b2f;
+}
+.icon.focus.smile3 {
+  border-color: #f5f535;
+}
+.icon.focus.smile4 {
+  border-color: #9dd935;
+}
+.icon.focus.smile5 {
+  border-color: #00ff2a;
+}
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+  display: none;
+}
+video.active {
+  display: block;
+}
+/* This used to work for parent element of button divs */
+/* But it is not enough now, below dont hide play button parent div */
+*::-webkit-media-controls-panel {
+  display: none!important;
+  -webkit-appearance: none;
+}
+/* Old shadow dom for play button */
+*::--webkit-media-controls-play-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+/* New shadow dom for play button */
+/* This one works */
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
